@@ -17,12 +17,12 @@ M104 S210		; Set nozzle to 210 and release
 M190 S60		; Set bed to 60 and wait
 M109 S210		; Set nozzle to 210 and wait
 
-M98 P"0:/macros/musical tunes/GetAttention.g"
+M98 P"0:/macros/Phaedrux/musical tunes/GetAttention.g"
 
 ; 1
 ;
 M291 P"Nozzle will now move to center of bed to reset Z0 and calibrate probe" S3
-M98 P"0:/macros/Calibration/Bed Leveling/1_Center Nozzle on Bed"
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Center Nozzle on Bed"
 G90 G1 Z3 F400
 M400
 G92 Z4 			; Reset z to 8 to allow jogging up to touch bed to nozzle
@@ -33,7 +33,7 @@ G90 G1 Z3 F400
 M104 S0 		; Turn off hotend heater as it's no longer needed
 M291 P"Probe will now move to center of bed and measure trigger height 10 times" R"ZProbe Trigger Height Calibration" T3
 M400
-M98 P"0:/macros/Calibration/Bed Leveling/1_Center Probe on Bed"
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Center Probe on Bed"
 
 G1 Z5
 M400
@@ -78,7 +78,7 @@ M400
 M500 P31 ; save trigger height to config-override.g
 G1 Z5
 
-M98 P"0:/macros/musical tunes/GetAttention.g"
+M98 P"0:/macros/Phaedrux/musical tunes/GetAttention.g"
 
 ; Turn off heaters
 ; 

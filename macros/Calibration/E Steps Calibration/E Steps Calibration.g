@@ -5,7 +5,7 @@ M291 S3 R"Proceed?" P"Run E Steps per MM Calibration?"
 M117 "Homing"
 ;G28 XY
 G28 ;Z 					; Home All Axis
-M98 P"0:/macros/1_Nozzle Access.g"	; Move print head to nozzle access
+M98 P"0:/macros/Phaedrux/1_Nozzle Access.g"	; Move print head to nozzle access
 T0					; Activate Tool0
 G10 P0 S220 R0				; Hot end to 215c
 M291 S3 R"Heating to 220" P"Mark 110mm on filament from top of extruder body."

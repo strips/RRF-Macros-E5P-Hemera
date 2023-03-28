@@ -5,7 +5,7 @@ M291 S3 R"Proceed?" P"Run E Steps per MM Calibration?"
 ;M117 "Homing"
 ;G28 XY
 ;G28 ;Z 					; Home All Axis
-;M98 P"0:/macros/1_Nozzle Access.g"	; Move print head to nozzle access
+;M98 P"0:/macros/Phaedrux/1_Nozzle Access.g"	; Move print head to nozzle access
 T0					; Activate Tool0
 G10 P0 S220 R0				; Hot end to 220c
 M291 S3 R"Heating to 220" P"Mark 110mm on filament from top of extruder body."
@@ -16,7 +16,7 @@ G1 E100 F60				; Extrude 100mm of filament at 400mm/min (6.56mm/s)
 M400
 G10 P0 S0 R0				; Turn off hot end
 T0					; Deactivate Tool0
-M98 P"0:/macros/Musical Tunes/TwoBits.g"
+M98 P"0:/macros/Phaedrux/Musical Tunes/TwoBits.g"
 M291 S2 P"Measure distance to mark and update e steps."
 ;M291 S2 P"old_e_steps * (100 / (110 - distance_to_mark))"
 ;M291 S2 P"Repeat test to verify." R"E Steps calibration complete."

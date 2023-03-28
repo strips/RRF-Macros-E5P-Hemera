@@ -5,7 +5,7 @@ M291 P"This will set Z0 and calibrate Zmax height" R"Proceed?" S3
 M291 P"Homing all axis" T5
 G28			; Home all
 G90			; Absolute positioning
-M98 P"0:/macros/0_Center Nozzle.g"	; Move nozzle to bed center	
+M98 P"0:/macros/Phaedrux/0_Center Nozzle.g"	; Move nozzle to bed center	
 M291 P"Adjust nozzle height until it's touching bed" Z1 S3
 G92 Z0 			; set Z0
 M291 P"Bed will now drop to Z300" S3
@@ -18,7 +18,7 @@ M291 P"Homing to Zmin" T5
 G28 Z
 M291 P"Ready to test Zmax homing?" R"Proceed?" S3
 M291 P"Homing to Zmax" T5
-M98 P"0:/macros/2_HomeZMax.g" ; Test Zmax homing
+M98 P"0:/macros/Phaedrux/2_HomeZMax.g" ; Test Zmax homing
 M291 P"ZMax homing test complete. Printer will now home all." R"Proceed?" S3
 G28	; Home all
 M291 "ZMax calibration complete." S3

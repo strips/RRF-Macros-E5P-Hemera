@@ -6,7 +6,7 @@ M291 S3 R"Non-Linear Extrusion Calibration" P"Preheating and homing. Press Ok to
 G10 P0 S230			; heat nozzle to 230
 G28 XY				; home all axis
 G28 Z
-M98 P"0:/macros/1_Nozzle Access.g"	; move to nozzle access position
+M98 P"0:/macros/Phaedrux/1_Nozzle Access.g"	; move to nozzle access position
 G1 X0
 M116				; wait for temps
 M83				; relative extrusion

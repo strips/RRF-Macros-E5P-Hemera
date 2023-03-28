@@ -27,11 +27,11 @@ M561			; Disable any current bed compensation
 ; Move nozzle forward for filament removal
 ;
 M291 P"Moving nozzle to the front for filament removal and cleaning." T0
-M98 P"0:/macros/1_Nozzle Access.g"		; Moves print head to front left and drops the bed down for easy access
+M98 P"0:/macros/Phaedrux/1_Nozzle Access.g"		; Moves print head to front left and drops the bed down for easy access
 
 M109 S85		; Set nozzle to 85 and wait
 
-M98 P"0:/macros/Musical Tunes/GetAttention.g" ; Tone to get user attention
+M98 P"0:/macros/Phaedrux/Musical Tunes/GetAttention.g" ; Tone to get user attention
 
 ; Unload filament and clean nozzle
 ;
@@ -44,12 +44,12 @@ M104 S210		; Set nozzle to 210 and release
 M190 S60		; Set bed to 60 and wait
 M109 S210		; Set nozzle to 210 and wait
 
-M98 P"0:/macros/Musical Tunes/GetAttention.g" ; Tone to get user attention
+M98 P"0:/macros/Phaedrux/Musical Tunes/GetAttention.g" ; Tone to get user attention
 
 ; Move nozzle to center of bed at Z10 and drop to Z1
 ;
 M291 P"Nozzle will now move to center of bed and move close to the bed" T0
-M98 P"0:/macros/0_Center Nozzle.g"
+M98 P"0:/macros/Phaedrux/0_Center Nozzle.g"
 G90 G1 Z3 F400	; drop bed for nozzle clearance
 G92 Z4 		; Reset z to 8 to allow jogging up to touch bed to nozzle
 
@@ -70,21 +70,21 @@ M291 P"Nozzle will now move to the 3 leveling points twice." S1 T2
 
 ; Move to leveling point 1
 G1 Z2      		; move to z2 for travel
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #1" ; Move to rear left corner
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #1" ; Move to rear left corner
 
 M400
 M291 P"Adjust point 1. Jog down by 2 and adjust screw." R"Adjustment Point 1" S2 Z1
 
 ; Move to leveling point 2
 G1 Z2			; Move to Z2 for clearance
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #2"	; Move to rear right corner
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #2"	; Move to rear right corner
 
 M400
 M291 P"Adjust point 2. Jog down by 2 and adjust screw." R"Adjustment Point 2" S2 Z1
 
 ; Move to leveling point 3
 G1 Z2			; Move to Z2 for clearance
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #3"	; Move to front middle
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #3"	; Move to front middle
 
 M400
 M291 P"Adjust point 3. Jog down by 2 and adjust screw." R"Adjustment Point 3" S2 Z1
@@ -95,27 +95,27 @@ M291 P"The adjustment sequence will now repeat for fine adjustment." S1 T2
 
 ; Move to leveling point 1
 G1 Z2      		; move to z2 for travel
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #1" ; Move to rear left corner
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #1" ; Move to rear left corner
 
 M400
 M291 P"Adjust point 1. Jog down by 2 and adjust screw." R"Adjustment Point 1" S2 Z1
 
 ; Move to leveling point 2
 G1 Z2			; Move to Z2 for clearance
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #2"	; Move to rear right corner
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #2"	; Move to rear right corner
 
 M400
 M291 P"Adjust point 2. Jog down by 2 and adjust screw." R"Adjustment Point 2" S2 Z1
 
 ; Move to leveling point 3
 G1 Z2			; Move to Z2 for clearance
-M98 P"0:/macros/Calibration/Bed Leveling/1_Leveling Position #3"	; Move to front middle
+M98 P"0:/macros/Phaedrux/Calibration/Bed Leveling/1_Leveling Position #3"	; Move to front middle
 
 M400
 M291 P"Adjust point 3. Jog down by 2 and adjust screw." R"Adjustment Point 3" S2 Z1
 G1 Z2			; Move to Z2 for clearance
 
-M98 P"0:/macros/Musical Tunes/GetAttention.g" ; Tone to get user attention
+M98 P"0:/macros/Phaedrux/Musical Tunes/GetAttention.g" ; Tone to get user attention
 
 ; Turn off heaters
 ; 

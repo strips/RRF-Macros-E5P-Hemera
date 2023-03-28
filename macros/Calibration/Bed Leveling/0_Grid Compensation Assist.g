@@ -21,14 +21,14 @@ M561			; Disable any current bed compensation
 M98 P"ZSpeedsSlow.g"
 M98 P"CurrentsHoming.g"			; Drop motor current to prevent damage in case of head crash
 
-M98 P"0:/macros/musical tunes/GetAttention.g" ; Tone to get user attention
+M98 P"0:/macros/Phaedrux/musical tunes/GetAttention.g" ; Tone to get user attention
 M291 P"Running mesh grid compensation probing cycle. Do not disturb the printer."
 
 M558 H1.5 ; lower dive height
 
 G29			; Run mesh compensation
 
-M98 P"0:/macros/musical tunes/GetAttention.g" ; Tone to get user attention
+M98 P"0:/macros/Phaedrux/musical tunes/GetAttention.g" ; Tone to get user attention
 
 M558 H3 ; return dive height
 
